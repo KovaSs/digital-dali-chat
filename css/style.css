@@ -24,7 +24,18 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+
+.before {
+  position: absolute;
+  width: 800px;
+  height: 1645px;
+  -webkit-transform: rotate(-47deg);
+  transform: rotate(-47deg);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -2;
+  margin-left: -306px; }
 
 .header {
   -ms-flex-item-align: start;
@@ -181,7 +192,8 @@ body {
           align-items: center;
   width: 750px;
   height: 110px;
-  background-color: #000000; }
+  background-color: #000000;
+  position: relative; }
   .down-block__text {
     margin-left: 50px; }
   .down-block__btn {
@@ -191,7 +203,7 @@ body {
     background-color: #ffbdb8;
     position: absolute;
     margin-left: 580px;
-    bottom: -311px;
+    bottom: 50px;
     cursor: pointer;
     text-decoration: none;
     border: none;
