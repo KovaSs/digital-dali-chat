@@ -3,14 +3,18 @@
           box-sizing: border-box; }
 
 body {
+  height: 1500px;
   background-color: #ccc;
-  font-family: Karla;
+  font-family: Karla, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .container {
   width: 750px;
@@ -35,7 +39,7 @@ body {
   transform: rotate(-47deg);
   background: rgba(0, 0, 0, 0.1);
   z-index: -2;
-  margin-left: -306px; }
+  margin-left: -194px; }
 
 .header {
   -ms-flex-item-align: start;
@@ -162,19 +166,35 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 750px;
-  height: 128px;
+  height: 155px;
   background-color: #000000; }
   .head-block__title {
     color: #ffffff;
     font-size: 34px;
     font-weight: 400; }
+  .head-block__clear {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px; }
+  .head-block__clear svg {
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    cursor: pointer; }
 
 .down-block {
   display: -webkit-box;
@@ -191,7 +211,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 750px;
-  height: 110px;
+  height: 132px;
   background-color: #000000;
   position: relative; }
   .down-block__text {
@@ -229,6 +249,27 @@ body {
       color: #ffffff; }
 
 .content-block {
-  margin: 50px;
+  width: 100%;
+  height: 100%;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  position: relative;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .content-block::-webkit-scrollbar {
+    width: 0; }
+  .content-block__message {
+    width: 650px;
+    background-color: #fff;
+    padding: 47px 50px 34px 50px;
+    margin: 50px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 46px; }
+  .content-block__username {
+    color: #ad807d;
+    font-size: 20px;
+    font-weight: 700; }
